@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
-    <ClInclude Include="Resource.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TicTacToe.h" />
   </ItemGroup>
@@ -151,10 +151,10 @@
     <ResourceCompile Include="TicTacToe.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\Tic Tac Toe Icons\o.ico" />
-    <Image Include="..\Tic Tac Toe Icons\tictactoe.ico" />
-    <Image Include="..\Tic Tac Toe Icons\x.ico" />
-    <Image Include="..\Tic Tac Toe Icons\x.png" />
+    <Image Include="res\o.ico" />
+    <Image Include="res\tictactoe.ico" />
+    <Image Include="res\x.ico" />
+    <Image Include="res\x.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
