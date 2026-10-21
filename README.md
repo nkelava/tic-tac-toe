@@ -1,6 +1,6 @@
 # TicTacToe
 
-This is a simple Tic Tac Toe game created in C++. I wanted to take a beginner project and play a little bit more with C++ and learn a bit more about Forms. Just to get a hint about how they work.
+This is a simple Tic Tac Toe game created in C++. I wanted to take a beginner project and play a little bit more with C++ and learn a bit more about Forms, just to get an idea of how they work.
 
 Game screen:
 
@@ -9,15 +9,15 @@ Game screen:
 
 # Layout
 
-As you can see on top-left and top-right side of the screen there is a player "profile" (player name, his playing icon\symbol).
-Between them in the middle there is a game counter which counts how many games were played so far and bellow that there is a current score. 
-Game window is also responsive so you can change the size of the window, although I've set minimal height and width to be as starting height and width so you can't go less than that.
-On the bottom I've put a text which says whose turn it is so if players forget whose turn it is there is a simple way to find out.
+As you can see, in the top-left and top-right corners of the screen there is a player "profile" (the player's name and their playing icon/symbol).
+Between them, in the middle, there is a game counter that shows how many games have been played so far, and below it is the current score.
+The game window is also resizable, although I've set the minimum width and height to match the starting size, so you can't make it any smaller than that.
+At the bottom there is a line of text that shows whose turn it is, so players can easily check if they forget.
 
 
 # Gameplay
 
-Gameplay is same as standard Tic Tac Toe so for more info you can read --> https://en.wikipedia.org/wiki/Tic-tac-toe
+The gameplay is the same as in standard Tic Tac Toe. For more info, see https://en.wikipedia.org/wiki/Tic-tac-toe
 
-Two message boxes will show up at the end of each round. First one will show round winner status, if player 1 wins it will say "Player 1 is the winner!", etc.
-Second message box will ask do you want to start a new game, in case of clicking "Yes" the game will continue but in case of clicking "No" you will exit the game and the game will terminate.
+Two message boxes show up at the end of each round. The first one shows the result of the round: if Player 1 wins, it says "Player 1 is the winner!", and so on.
+The second one asks whether you want to start a new game. Clicking "Yes" starts the next game, while clicking "No" closes the game.

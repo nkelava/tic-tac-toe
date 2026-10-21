@@ -24,7 +24,7 @@ BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
-// My CBTMessageBox functions for centering MessageBox
+// My CBTMessageBox functions for centering message boxes
 INT CBTMessageBox(HWND, LPSTR, LPSTR, UINT);
 LRESULT CALLBACK CBTProc(INT, WPARAM, LPARAM);
 void NewGameMsgBox(HWND&);
@@ -161,7 +161,7 @@ LRESULT CALLBACK CBTProc(INT nCode, WPARAM wParam, LPARAM lParam)
             pStart.x = (pCenter.x - (nWidth / 2));
             pStart.y = (pCenter.y - (nHeight / 2));
 
-            // Adjust if message box is off desktop
+            // Adjust if message box is off the desktop
             if (pStart.x < 0) pStart.x = 0;
             if (pStart.y < 0) pStart.y = 0;
             if (pStart.x + nWidth > rDesktop.right)
@@ -210,7 +210,7 @@ int playerTurn = 1;
 int gameBoard[9] = { 0 };
 int winner = 0;
 int wins[3];   // For storing winning line positions
-int score[2] = { 0, 0 };  // [0] = player 1 score, [2] player 2 score
+int score[2] = { 0, 0 };  // [0] = player 1 score, [1] = player 2 score
 int gameCount = 1;
 
 BOOL GetGameBoardRect(HWND hwnd, RECT* pRect)
@@ -293,8 +293,8 @@ BOOL GetCellRect(HWND hWnd, int index, RECT* pRect)
 /*
     Returns:
     0 - No winner
-    1 - Player wins
-    2 - Player wins
+    1 - Player 1 wins
+    2 - Player 2 wins
     3 - Draw
 */
 int GetWinner(int wins[])
@@ -315,7 +315,7 @@ int GetWinner(int wins[])
         }
     }
 
-    // Check for empty cells, so we know is it a draw or not
+    // Check for empty cells to find out whether it's a draw
     for (int i = 0; i < ARRAYSIZE(gameBoard); ++i)
     {
         if (gameBoard[i] == 0)
@@ -459,7 +459,7 @@ void NewGameMsgBox(HWND& hWnd)
         gameCount++;
         ZeroMemory(gameBoard, sizeof(gameBoard));
         // Force a paint message
-        InvalidateRect(hWnd, NULL, TRUE); // Post WM_PAINT to out windowProc. It get queued in out msg queue
+        InvalidateRect(hWnd, NULL, TRUE); // Post WM_PAINT to our window procedure. It gets queued in our message queue
         UpdateWindow(hWnd); // Forces immediate handling of WM_PAINT
     }
     else
@@ -522,7 +522,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         HDC hdc = GetDC(hWnd);
         if (hdc != NULL)
         {
-            // Get cell dimension from its index
+            // Get cell dimensions from its index
             if (index != -1)
             {
                 RECT rcCell;
@@ -553,7 +553,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     }
                     else if (winner == 0)  
                     {
-                        // No winner so continue
+                        // No winner, so continue
                         playerTurn = (playerTurn == 2) ? 1 : 2;
                     }
                     // Display turn
