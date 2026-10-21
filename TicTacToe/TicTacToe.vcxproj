@@ -151,14 +151,10 @@
     <ResourceCompile Include="TicTacToe.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\Preuzimanja\images.ico" />
-    <Image Include="..\..\..\Preuzimanja\images.ico" />
     <Image Include="..\Tic Tac Toe Icons\o.ico" />
     <Image Include="..\Tic Tac Toe Icons\tictactoe.ico" />
     <Image Include="..\Tic Tac Toe Icons\x.ico" />
     <Image Include="..\Tic Tac Toe Icons\x.png" />
-    <Image Include="small.ico" />
-    <Image Include="TicTacToe.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

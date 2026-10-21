@@ -39,15 +39,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="TicTacToe.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="small.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="..\..\..\Preuzimanja\images.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="..\Tic Tac Toe Icons\x.ico">
       <Filter>Resource Files</Filter>
     </Image>
@@ -55,9 +46,6 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="..\Tic Tac Toe Icons\x.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="..\..\..\..\Preuzimanja\images.ico">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="..\Tic Tac Toe Icons\tictactoe.ico">
